@@ -1,22 +1,79 @@
+
 <!DOCTYPE html>
-
-<html lang=”pt-br”>
-<body style="text-align: center"; background="/tmp/guest-2adrsb/Área de Trabalho/gato da lua.jpg";>
-    
-    <h1>
+<html lang="pt-br">
 <head>
-  <p style="color: rgb(255, 255, 255)">VICTOR</p>
-<meta charset=”UTF-8”>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('/tmp/guest-g3u4or/Área de Trabalho/site/download.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
 
-<title>meu portifólio</title>
-<link rel=”stylesheet” href=”style.css”>
-<img src='/tmp/guest-2adrsb/Área de Trabalho/istockphoto-1314734844-612x612-1.jpg'>
-<p style="color: rgb(255, 255, 255)">Sou estudante do ensino médio, gosto aprender coisas que envolvam principalmente numeros, minha comida favorita é macarrão alho e óleo, não sou muito interativo, e tenho um gosto musical variado.</p>
-<div>
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col items-center p-4">
 
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GqSjAF41aDU?si=XccNW6P4scSHoN7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p style="color: rgb(255, 255, 255)">Responsividade significa a capacidade de responder a estímulos, situações ou questões de forma rápida e adequada, demonstrando atenção e compreensão</p>
-</div>
-</h1>
+    <header class="w-full max-w-4xl text-center py-8">
+        <h1 class="text-5xl font-bold text-blue-400 rounded-lg p-2 shadow-lg mb-6">VICTOR</h1>
+        
+        <img src="/tmp/guest-g3u4or/Área de Trabalho/site/gato preto.jpg" alt="Imagem de Perfil" class="mx-auto mt-6 rounded-full shadow-lg border-4 border-blue-500">
+        
+        <p class="mt-4 text-lg max-w-2xl mx-auto">Sou estudante do ensino médio, gosto de aprender coisas que envolvam principalmente números, minha comida favorita é macarrão alho e óleo, não sou muito interativo, e tenho um gosto musical variado.</p>
+    </header>
+
+    <main class="w-full max-w-4xl bg-gray-800 rounded-lg shadow-xl p-8 mb-8 bg-opacity-90"> 
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Minha Introdução</h2>
+            <p class="text-lg leading-relaxed">Este é um portfólio para mostrar um pouco sobre mim e meus interesses. A responsividade é um conceito chave no desenvolvimento web moderno, garantindo que o conteúdo se adapte a diferentes tamanhos de tela.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Vídeo Interessante</h2>
+            <div class="responsive-iframe-container rounded-lg shadow-md">
+                <iframe src="https://www.youtube-nocookie.com/embed/GqSjAF41aDU?si=XccNW6P4scSH0N7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="mt-4 text-md text-gray-300">Responsividade significa a capacidade de responder a estímulos, situações ou questões de forma rápida e adequada, demonstrando atenção e compreensão.</p>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Contato</h2>
+            <p class="text-lg">Você pode me encontrar em [Seu LinkedIn/GitHub/Email]</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">LinkedIn</a>
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full max-w-4xl text-center py-4 text-gray-500 text-sm bg-gray-900 bg-opacity-80 mt-auto"> 
+        <p>&copy; 2025 Victor. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

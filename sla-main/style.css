@@ -1,4 +1,31 @@
 body {
-    background-image: url('/tmp/guest-9zkk2r/Área de Trabalho/Municipio-campo-e-cidade.png');
-    background-size: cover;
-  }
+    background-color: bisque;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+/* Estiliza a tag <footer>, que representa o rodapé da página */
+footer {
+    /* Cor de fundo preta */
+    background-color: black;
+    /* Cor do texto branca */
+    color: white;
+    /* Define a posição do elemento como fixa em relação à viewport.
+       Isso faz com que ele não saia do lugar ao rolar a página. */
+    position: fixed;
+    /* Alinha o rodapé à parte inferior da tela (0 pixels do fundo) */
+    bottom: 0;
+    /* Garante que o rodapé ocupe 100% da largura da tela */
+    width: 100%;
+    /* Define a altura do rodapé */
+    height: 2rem; /* Por exemplo, 2 vezes o tamanho da fonte padrão */
+}
+
+/* Estiliza a tag <p> que está dentro da tag <footer> */
+footer p {
+    /* Centraliza o texto horizontalmente */
+    text-align: center;
+    /* Define o tamanho da fonte. '0.6rem' é menor que o padrão. */
+    font-size: 0.6rem;
+    /* Adiciona uma margem superior para afastar o texto da borda superior do rodapé. */
+    margin-top: 0.5rem;
+}
