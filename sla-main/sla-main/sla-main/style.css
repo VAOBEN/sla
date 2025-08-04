@@ -1,133 +1,31 @@
-/* --- Variáveis CSS --- */
-:root {
-    --primary-bg-color: #0d47a1;
-    --footer-bg-color: #1a202c;
-    --footer-text-color: #a0aec0;
-    
-    --card-front-color: #e0f2f7;
-    --text-color: #263238;
-    --card-transition-duration: 400ms;
-    --card-border-radius: 0.6rem;
-    --card-padding: 0.8rem;
-    --card-margin: 0.6rem;
-    --card-width: 280px;
-    --card-height: 200px;
-}
-
-/* --- Estilos Gerais --- */
 body {
-    background-color: var(--primary-bg-color);
-    font-family: 'Inter', 'Bai Jamjuree', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: bisque;
+    font-family: 'Bai Jamjuree', sans-serif;
 }
 
-.responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* --- Rodapé --- */
+/* Estiliza a tag <footer>, que representa o rodapé da página */
 footer {
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+    /* Cor de fundo preta */
+    background-color: black;
+    /* Cor do texto branca */
+    color: white;
+    /* Define a posição do elemento como fixa em relação à viewport.
+       Isso faz com que ele não saia do lugar ao rolar a página. */
+    position: fixed;
+    /* Alinha o rodapé à parte inferior da tela (0 pixels do fundo) */
+    bottom: 0;
+    /* Garante que o rodapé ocupe 100% da largura da tela */
     width: 100%;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0;
-    box-sizing: border-box;
+    /* Define a altura do rodapé */
+    height: 2rem; /* Por exemplo, 2 vezes o tamanho da fonte padrão */
 }
 
+/* Estiliza a tag <p> que está dentro da tag <footer> */
 footer p {
+    /* Centraliza o texto horizontalmente */
     text-align: center;
-    font-size: 0.75rem;
-    margin: 0;
-}
-
-/* --- Estilos do Cartão --- */
-.cartao {
-    background-color: transparent;
-    width: var(--card-width);
-    height: var(--card-height);
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.cartao:hover .cartao__conteudo {
-    transform: rotateY(180deg);
-}
-
-.cartao__conteudo {
-    background-color: var(--card-front-color);
-    border-radius: var(--card-border-radius);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform var(--card-transition-duration) ease-in-out;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cartao__conteudo h3 {
-    color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--text-color);
-    text-align: left;
-    padding: var(--card-padding);
-    position: absolute;
-    top: var(--card-margin);
-    left: var(--card-margin);
-    border-radius: var(--card-border-radius);
-    font-size: 0.9vw;
-    font-weight: 600;
-    backface-visibility: hidden;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .cartao__conteudo h3 {
-        font-size: 2.5vw;
-    }
-}
-@media (max-width: 480px) {
-    .cartao__conteudo h3 {
-        font-size: 3.5vw;
-    }
-}
-
-.cartao__conteudo__pergunta,
-.cartao__conteudo__resposta {
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: calc(var(--card-padding) * 2);
-    box-sizing: border-box;
-    color: var(--text-color);
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.cartao__conteudo__resposta {
-    transform: rotateY(180deg);
+    /* Define o tamanho da fonte. '0.6rem' é menor que o padrão. */
+    font-size: 0.6rem;
+    /* Adiciona uma margem superior para afastar o texto da borda superior do rodapé. */
+    margin-top: 0.5rem;
 }

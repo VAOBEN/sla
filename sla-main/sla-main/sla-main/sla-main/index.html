@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Victor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Variáveis CSS --- */
+        :root {
+            --primary-bg-color: #0d47a1;
+            --footer-bg-color: #1a202c;
+            --footer-text-color: #a0aec0;
+            
+            --card-front-color: #e0f2f7;
+            --text-color: #263238;
+            --card-transition-duration: 400ms;
+            --card-border-radius: 0.6rem;
+            --card-padding: 0.8rem;
+            --card-margin: 0.6rem;
+            --card-width: 280px;
+            --card-height: 200px;
+        }
+        
+        /* --- Estilos Gerais --- */
+        body {
+            /* Imagem de Fundo (Caminho local, precisa ser um URL público) */
+            background-image: url('/tmp/guest-kjeqec/Área de Trabalho/sla-main/sla-main/sla-main/sla-main/download.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #0d47a1; /* Cor de fallback caso a imagem não carregue */
+            
+            font-family: 'Inter', 'Bai Jamjuree', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* --- Rodapé --- */
+        footer {
+            background-color: var(--footer-bg-color);
+            color: var(--footer-text-color);
+            width: 100%;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0;
+            box-sizing: border-box;
+        }
+        
+        footer p {
+            text-align: center;
+            font-size: 0.75rem;
+            margin: 0;
+        }
+        
+        /* --- Estilos do Cartão --- */
+        .cartao {
+            background-color: transparent;
+            width: var(--card-width);
+            height: var(--card-height);
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        
+        .cartao:hover .cartao__conteudo {
+            transform: rotateY(180deg);
+        }
+        
+        .cartao__conteudo {
+            background-color: var(--card-front-color);
+            border-radius: var(--card-border-radius);
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform var(--card-transition-duration) ease-in-out;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Novas classes para frente e verso do cartão */
+        .cartao__frente,
+        .cartao__verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            border-radius: var(--card-border-radius);
+            color: var(--text-color);
+        }
+
+        .cartao__verso {
+            transform: rotateY(180deg);
+        }
+
+        .cartao__frente h3,
+        .cartao__verso h3 {
+            position: absolute;
+            top: var(--card-margin);
+            left: var(--card-margin);
+            font-size: 0.9rem;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 0.4rem 0.6rem;
+            border-radius: var(--card-border-radius);
+            border: 1px solid var(--text-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cartao__frente p,
+        .cartao__verso p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .cartao__frente h3,
+            .cartao__verso h3 {
+                font-size: 2.5vw;
+            }
+        }
+        @media (max-width: 480px) {
+            .cartao__frente h3,
+            .cartao__verso h3 {
+                font-size: 3.5vw;
+            }
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col items-center p-4">
+    <header class="w-full max-w-4xl text-center py-8">
+        <h1 class="text-5xl font-bold text-blue-400 rounded-lg p-2 shadow-lg mb-6">VICTOR</h1>
+        
+        <img src="/tmp/guest-kjeqec/Área de Trabalho/sla-main/sla-main/sla-main/sla-main/gato preto.jpg" alt="Foto de perfil de Victor" class="mx-auto mt-6 rounded-full shadow-lg border-4 border-blue-500 w-48 h-48 object-cover">
+        
+        <p class="mt-4 text-lg max-w-2xl mx-auto">Sou estudante do ensino médio, gosto de aprender coisas que envolvem principalmente **números**, minha comida favorita é macarrão alho e óleo, não sou muito interativo, e tenho um gosto musical variado.</p>
+    </header>
+
+    <main class="w-full max-w-4xl bg-gray-800 rounded-lg shadow-xl p-8 mb-8 bg-opacity-90"> 
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Minha Jornada e Interesses</h2>
+            <p class="text-lg leading-relaxed">Este portfólio é um espaço para compartilhar um pouco sobre quem eu sou e o que me motiva. Como estudante do ensino médio, tenho um grande interesse em áreas que envolvem lógica e cálculos, buscando sempre novos desafios para expandir meus conhecimentos. Acredito que a **responsividade** no desenvolvimento web é fundamental, assim como a capacidade de se adaptar e resolver problemas em qualquer campo.</p>
+        </section>
+
+        <hr class="border-t-2 border-gray-700 my-8">
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Meus Conhecimentos em Programação</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <article class="cartao">
+                    <div class="cartao__conteudo">
+                        <div class="cartao__frente">
+                            <h3>Programação</h3>
+                            <p>O que é HTML?</p>
+                        </div>
+                        <div class="cartao__verso">
+                            <p>HTML é uma linguagem de marcação para criar páginas web.</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cartao">
+                    <div class="cartao__conteudo">
+                        <div class="cartao__frente">
+                            <h3>Programação</h3>
+                            <p>O que é CSS?</p>
+                        </div>
+                        <div class="cartao__verso">
+                            <p>CSS é uma linguagem de estilo usada para descrever a apresentação de um documento em HTML.</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cartao">
+                    <div class="cartao__conteudo">
+                        <div class="cartao__frente">
+                            <h3>Matemática</h3>
+                            <p>Quem é Pitágoras?</p>
+                        </div>
+                        <div class="cartao__verso">
+                            <p>Pitágoras foi um matemático e filósofo grego, famoso pelo teorema que leva seu nome.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-gray-700 my-8">
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Um Conceito Relevante: Adaptabilidade</h2>
+            <div class="responsive-iframe-container rounded-lg shadow-md">
+                <iframe src="https://www.youtube-nocookie.com/embed/GqSjAF41aDU?si=XccNW6P4scSH0N7c" title="YouTube video player sobre adaptabilidade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="mt-4 text-md text-gray-300">A **adaptabilidade** é a capacidade de responder a estímulos, situações ou questões de forma rápida e adequada, demonstrando atenção e compreensão. Este vídeo ilustra a importância de ser flexível e resiliente, qualidades que valorizo tanto na vida quanto na programação.</p>
+        </section>
+
+        <hr class="border-t-2 border-gray-700 my-8">
+
+        <section>
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Vamos Conectar!</h2>
+            <p class="text-lg mb-4">Se você se interessou pelo meu perfil ou tem alguma pergunta, sinta-se à vontade para me contatar. Adoraria conectar e trocar ideias!</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/SEU_USUARIO/" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">LinkedIn</a>
+                <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full max-w-4xl text-center py-4 text-gray-500 text-sm bg-gray-900 bg-opacity-80 mt-auto"> 
+        <p>&copy; 2025 Victor. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
